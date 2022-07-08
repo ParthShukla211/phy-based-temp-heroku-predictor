@@ -5,7 +5,7 @@ import numpy as np
 
 
 pipe = pickle.load(open('phymodel.pkl','rb'))
-st.title('Physics Based Temp Predictor')
+st.title('Physics Based Temperature Predictor')
 
 
 depth = st.number_input('depth')
@@ -18,5 +18,5 @@ lon = st.number_input('lon')
 if st.button('Predict Clay'):
       input=pd.DataFrame({'depth':[depth],'lat':[lat],'Silt':[lon]})
       result = pipe.predict(input)
-      st.success('THE Clay FOR GIVEN DATA WILL BE {}'.format(result))
+      st.success('THE TEMPERATURE FOR GIVEN DATA WILL BE {}'.format(result))
 # st.header(result)
