@@ -15,7 +15,7 @@ lon = st.number_input('lon')
 
 
 # 'pH(CaCl2)':[pH(CaCl2)],'pH(H2O)':[pH(H2O)],
-if st.button('Predict Clay'):
+if st.button('Predict'):
       input=pd.DataFrame({'depth':[depth],'lat':[lat],'Silt':[lon]})
       result = pipe.predict(input)
       st.success('THE TEMPERATURE FOR GIVEN DATA WILL BE {}'.format(result))
